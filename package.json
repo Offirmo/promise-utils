@@ -1,0 +1,14 @@
+{
+  "name": "promise-utils",
+  "version": "0.0.1",
+  "description": " A monorepo of small npm modules for working with the javascript promises ",
+  "main": "index.js",
+  "repository": "https://github.com/Offirmo/promise-utils.git",
+  "author": "Offirmo <offirmo.net@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@offirmo/unit-test-toolbox": "^2.1.0",
+    "lerna": "^2.5.1"
+  }
+}
