@@ -8,7 +8,7 @@
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
-    "@offirmo/unit-test-toolbox": "^2.1.0",
+    "@offirmo/unit-test-toolbox": "^3.0.0",
     "lerna": "^2.5.1"
   }
 }
