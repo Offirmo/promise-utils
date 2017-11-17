@@ -6,7 +6,11 @@
   "author": "Offirmo <offirmo.net@gmail.com>",
   "license": "UNLICENSED",
   "private": false,
+  "repository": "https://github.com/Offirmo/promise-utils.git",
   "scripts": {
     "test": "../../node_modules/.bin/mocha --opts ../../node_modules/@offirmo/unit-test-toolbox/mocha.opts ../../node_modules/@offirmo/unit-test-toolbox/mocha-chai-init-node.js './**/*spec.js'"
+  },
+  "dependencies": {
+    "p-is-promise": "^1.1.0"
   }
 }

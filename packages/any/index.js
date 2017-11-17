@@ -1,5 +1,7 @@
 "use strict";
 
+const pIsPromise = require('p-is-promise')
+
 const LIB = '@promise-utils/any'
 
 function promiseAny(...promises) {
@@ -7,12 +9,17 @@ function promiseAny(...promises) {
 		throw new RangeError(`${LIB}: promiseAny(...): should pass at least one promise!`)
 
 	promises.forEach(p => {
-		if (!p || typeof (p.then) !== 'function')
+		if (!p || !pIsPromise(p))
 			throw new TypeError(`${LIB}: promiseAny(...): all args should be promises!`)
 	})
 
-	return Promise.resolve((resolve, reject) => {
-		promises.forEach(p => p.then(resolve, reject))
+	const length = promises.length
+	let rejection_count = 0
+	return new Promise((resolve, reject) => {
+		promises.forEach(p => p.then(resolve, err => {
+			rejection_count++
+			if (rejection_count >= length) reject(err)
+		}))
 	})
 }
 
