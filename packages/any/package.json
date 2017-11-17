@@ -1,6 +1,6 @@
 {
   "name": "@promise-utils/any",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "An ajternative to Promise.race",
   "main": "index.js",
   "author": "Offirmo <offirmo.net@gmail.com>",
