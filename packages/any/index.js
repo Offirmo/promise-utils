@@ -4,7 +4,8 @@ const pIsPromise = require('p-is-promise')
 
 const LIB = '@promise-utils/any'
 
-function promiseAny(...promises) {
+function promiseAny() {
+	const promises = Array.from(arguments)
 	if (promises.length === 0)
 		throw new RangeError(`${LIB}: promiseAny(...): should pass at least one promise!`)
 
